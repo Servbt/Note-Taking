@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 //render homepage
-router.get('/home', async (req, res) => {
+router.get('/', async (req, res) => {
 
 });
 
