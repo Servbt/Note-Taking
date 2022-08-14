@@ -1,9 +1,9 @@
 
 const router = require("express").Router();
 
-router.get('/notes', (req, res) => {
-    readFromFile('./db/tips.json').then((data) => res.json(JSON.parse(data)));
-});
+router.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, './public/notes.html'))
+);
 
 router.post("/notes", async (req, res) => {
 
