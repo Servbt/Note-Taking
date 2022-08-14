@@ -11,4 +11,4 @@ I need to read over the json file initially and then make an array with all of t
 Once that is done I can write a new array onto the json file for displaying all current notes..
 
 ![Home Page](./Assets/capture.PNG)
-![Note Page](./Assets/capture2.PNG)
+![Note Page](./Assets/Capture2.PNG)
