@@ -1,12 +1,13 @@
 
-const router = require("express").Router();
+const fs = require("fs");
+const  route  = require("../homeRoutes");
 
-router.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, './public/notes.html'))
-);
 
-router.post("/notes", async (req, res) => {
-
-});
-
-module.exports = router;
+ route.get("/api/notes", function (req, res) {
+        fs.readFile(__dirname + "/../db/db.json", (err, data) => {
+        if (err) throw err;
+        res.json(JSON.parse(data));
+        });
+    });
+  
+module.exports = route;
